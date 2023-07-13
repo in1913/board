@@ -1,0 +1,708 @@
+@charset "UTF-8";
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	padding-top: 180px;
+}
+a, a:link{
+	color: #333;
+	text-decoration: none;
+}
+/************ header **************/
+header{
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.brand{
+	font-weight: 800;
+	text-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+a.brand:hover{
+	color: #333;
+	text-decoration: none;
+}
+.top-nav{
+	font-size: 10px;
+	line-height: 20px;
+	color: #fff;
+}
+.top-nav a{
+	font-size: 14px;
+	color: #fff;
+	margin-left: 8px;
+	margin-right: 8px;	
+}
+.top-nav a:last-child{
+	font-size: 14px;
+	color: #fff;
+	margin-left: 8px;
+	margin-right: 0;	
+}
+.navi{
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.navi a:first-child{
+	font-weight: 400;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+.navi a:last-child{
+	font-weight: 400;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.navi a:nth-child(2){
+	font-weight: 400;
+	padding: 5px 10px;
+}
+.navi a{
+	white-space: nowrap;
+}
+.navi a:hover{ 
+	font-weight: 600;
+	color: #fff;
+}
+footer{
+	position: fixed;
+	width: 100%;
+	border-top: 1px solid #ddd;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background: #ddd;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	color: #999;
+}
+form.header-memberedit button{
+	background: transparent;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+    margin-left: 8px;
+}
+.mem-welcome{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+.welcome-sm{
+	position: relative;
+}
+.show-info{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display:none;
+}
+.show-info-li{
+	position: absolute;
+	right: 0;
+	top: 30px;
+	border:1px solid #ccc;
+}
+.show-info-li hr{
+	margin: 0;
+}
+.show-info>li>a{
+	display:block;
+	text-align: left;
+	height: 25px;
+}
+.mem-welcome-a{
+	display:block;
+	text-align: left;
+	height: 25px;
+	color: #333;
+}
+.show-info-toggle{
+	position:relative;
+}
+.show-info-toggle::before{
+	content: "";
+    position: absolute;
+    top: -16px;
+    right: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #ccc transparent;
+}
+.show-info-toggle::after{
+	content: "";
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #6c757d transparent;
+}
+.active{
+	display: block;
+}
+.header-user-img{
+	border-radius: 50%;
+	display: inline-block;
+	overflow:hidden;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+}
+.header-user-img img{
+	background: #fff;
+	max-width: 30px;
+	max-height: 30px;
+}
+/********** register.jsp ***********/
+.registerform{
+	max-width: 600px;
+	padding: 20px 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #efefef;
+	border: 1px solid #eee;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0 10px 5px 0 rgba(0,0,0,0.25),
+				 0 10px 15px 0 rgba(0,0,0,0.14);
+}
+.registerform-h1{
+	max-width: 600px;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.25),
+				 0 10px 15px 0 rgba(0,0,0,0.14);
+ 	color: #fff;
+}
+.registerform .input-group-prepand{
+	width: 120px;
+}
+.registerform .input-group-append button{
+	width: 85px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.emptysp{
+	width: 120px;
+}
+.tel-select{
+	width: 60px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+.registerform input[type=password]{
+	position: relative;
+}
+.registerform .passwordsee{
+	color: #ccc;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	z-index: 99;
+}
+.registerform input{
+	font-size: 15px;
+}
+.registerform input#userpass{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.registerform input#reuserpass{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.registerform span{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.registerform label{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.registerform p.warning-text{
+	color: red;
+	font-size: 10px;
+	margin-top: 5px;
+	margin-left: 120px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.register-user-img{
+	position: relative;
+	border-radius: 50%;
+	overflow:hidden;
+	display: inline-block;
+	width: 220px;
+	height: 220px;
+}
+.register-user-img img{
+	background: #fff;
+	max-width: 220px;
+	max-height: 220px;
+}
+#photo{
+	display: none;
+}
+.user-photo-click{
+	display: block;
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	border: none;
+}
+/*************** login.jsp *******************/
+.loginform{
+	max-width: 600px;
+	padding: 20px 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #efefef;
+	border: 1px solid #eee;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.25),
+				 0 10px 15px 0 rgba(0,0,0,0.14);
+}
+.loginform .input-group-prepand{
+	width: 120px;
+}
+.loginform span{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.loginform input#userpass{
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.loginform .passwordsee{
+	color: #ccc;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 10px;
+	z-index: 99;
+}
+.loginform-h1{
+	max-width: 600px;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.25),
+				 0 10px 15px 0 rgba(0,0,0,0.14);
+	color: #fff;
+}
+.wh600{
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.login-btn{
+	width: 100%;
+}
+a.naver-btn img{
+	width: 150px;
+	height: 40px;
+	object-fit:cover;
+}
+a.kakao-btn img{
+	width: 150px;
+	height: 40px;
+	object-position: 0px 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	object-fit:cover;
+}
+#buttonDiv{
+	margin-top: 6px;
+	margin-left: 10px;
+}
+.loginform .login-btn{
+	font-size: 14px;
+}
+.loginform p.warning-text{
+	color: red;
+	font-size: 10px;
+	margin-top: 5px;
+	margin-left: 120px;
+}
+.login-fail{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	background: #fff;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 999;
+	width: 300px;
+	text-align: center;
+	padding-top: 15px;
+	border: 1px solid;
+	border-radius: 5px;
+	overflow: hidden;
+	display: none;
+	font-size: 13px;
+}
+.login-fail h6{
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.login-fail a{
+	display: block;
+}
+.loginform .warning-public{
+	color: red;
+	font-size: 10px;
+	margin-bottom: 0;
+	height: 10px;
+}
+.signIn{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background: #fff;
+	z-index: 999;
+	width: 300px;
+	text-align: center;
+	padding-top: 15px;
+	border: 1px solid;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 13px;
+	display: none;
+}
+.signIn h6{
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.signIn a{
+	display: block;
+}
+.edit{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background: #fff;
+	z-index: 999;
+	width: 300px;
+	text-align: center;
+	padding-top: 15px;
+	border: 1px solid;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 13px;
+	display: none;
+}
+.edit h6{
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.edit a{
+	display: block;
+}
+/* ******** findmember.jsp *********** */
+
+.get-email{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	background: #fff;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 999;
+	width: 300px;
+	text-align: center;
+	padding-top: 15px;
+	border: 1px solid;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 13px;
+	display: none;
+}
+.get-email h6{
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.get-email a{
+	display: block;
+}
+/*************** admin *****************/
+.admin .row:not(:first-child){
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+}
+.admin-title{
+	border-top: 2px solid #0d6efd;
+	background: #ccc;
+}
+.admin-title>div{
+	display :flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+}
+.admin-title>div>span{
+	font-size: 20px;
+	margin-top: 15px;
+}
+.user-search{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 10px;
+	background : #fff;
+	padding-right: 5px;
+}
+.user-search>img{
+	margin-left: 10px;
+}
+.user-search input{
+	border: none;
+	padding: 10px;
+}
+.editpopup{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: none;
+	z-index: 1000;
+	width: 300px;
+	background : #fff; 
+	border-radius: 4px;
+}
+.editpopup form{
+	display: flex;
+	flex-direction: column;
+}
+.editpopup form>a{
+	color: #fff;
+}
+.editpopup .editpopup-title{
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 10px;
+}
+.editpopup-content{
+	padding: 20px;
+}
+.editpopup hr{
+	margin: 0;
+}
+.shadow{
+	background: rgba(0,0,0,0.3);
+	z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.admin-paging{
+	margin-bottom: 100px;
+	width: 150px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.admin-paging a{
+	display: inline-block;
+	margin-top: 20px;
+	text-align: center;
+}
+.editpen{
+	margin-left: 15px;
+}
+.admin-user-img{
+	border-radius: 50%;
+	overflow:hidden;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	
+}
+.admin-user-img img{
+	background: #ccc;
+	max-width: 35px;
+	max-height: 35px;
+}
+/******** freeboard/boardlist.jsp ********/
+.freeboardtable{
+	table-layout: fixed;
+}
+.freeboardtable th{
+	border-right: 1px solid #ccc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #444444;
+	color: #fff;
+}
+.freeboardtable tr{
+	border-bottom: 1px solid #ccc;
+}
+.freeboardtable tr:hover{
+	background: #ccc;
+}
+.freeboardtable td{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.freeboardtable .free-content{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display :flex;
+	align-items: center;
+}
+/*********** edit.jsp **************/
+input.editboardtitle{
+	border: none;
+	border-bottom: 4px solid orange;
+	color: #fff;
+	background: #6c757d;
+	outline: none; 
+	font-size: 20px;
+}
+input.editboardtitle::placeholder,
+input.editboardtitle:-ms-input-placeholder,
+input.editboardtitle::-ms-input-placeholder{
+	color: #fff;
+	z-index: 10;
+}
+div.edit-left{
+	border-right: #fff 4px solid;	
+}
+
+.fileshow img{
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+}
+.fileshow {
+	position: relative;
+	display: inline-block;
+}
+.fileshow .img-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	z-index: 100;
+}
+.editor-menu a{
+	display: inline-block;
+	width: 30px;
+	border: 1px solid ;
+	text-align: center;
+}
+/****************** mytext.jsp ********************/
+.mytxt-container p{
+	word-wrap: break-word;
+	font-weight: 200;
+}
+.comment-context a{
+	padding: 5px;	
+}
+div.write-reply{
+	display: none;
+}
+#write-ReReply{
+	display: none;
+}
+.comment-modibox{
+	display: none;
+}
+.ip-show{
+	display: none;
+}
+#reply-modibox{
+	display: none;
+}
+#rereply-modibox{
+	display: none;
+}
+#ip-reply-show{
+	display: none;
+}
+div.text-clipboard{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 100px;
+	transform: translateX(-50%) translateY(-50%);
+	background: #fff;
+	color: #000;
+	border-radius: 10px;
+	padding: 20px;
+	display:none;
+	z-index:1000;
+}
+div.text-clipboard p{
+	padding: 0;
+	padding-top: 5px;
+	margin: 0;
+}
+.mytxt-real-content {
+	min-height: 300px;
+}
+.text-funcs>a:first-child{
+	margin-right: 10px;
+}
+.text-funcs{
+	margin-bottom: 30px;
+}
+#shadow{
+	background: rgba(0,0,0,0.5);
+	z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/**************** main *******************/
+.mainContainer{
+	height: 400px;
+}
+.mainContainer p{
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	line-height: 40px;
+}
+.mainContainer p>span:first-child{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 80%;
+}
